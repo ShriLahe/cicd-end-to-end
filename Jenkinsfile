@@ -22,7 +22,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:${BUILD_NUMBER} .
+                    docker build -t ShriLahe/cidi-artifacts:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push abhishekf5/cicd-e2e:${BUILD_NUMBER}
+                    docker push ShriLahe/cidi-artifacts:${BUILD_NUMBER}
                     '''
                 }
             }
