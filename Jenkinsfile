@@ -31,7 +31,10 @@ pipeline {
         stage('Push the artifacts'){
            steps{
                 script{
+                    withCredentials([string(credentialsId: '326598147', variable: 'dockerhubjenkins')]) {
+               }
                     sh '''
+                    docker login -u pradipak4me@gmail.com -dockerhubjenkins
                     echo 'Push to Repo'
                     docker push 326598147/cici-repo:${BUILD_NUMBER}
                     '''
