@@ -34,7 +34,7 @@ pipeline {
                     withCredentials([string(credentialsId: '326598147', variable: 'dockerhubjenkins')]) {
                }
                     sh '''
-                    docker login -u pradipak4me@gmail.com -dockerhubjenkins
+                    docker login -u pradipak4me@gmail.com dockerhubjenkins
                     echo 'Push to Repo'
                     docker push 326598147/cici-repo:${BUILD_NUMBER}
                     '''
