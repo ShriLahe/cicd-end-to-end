@@ -22,7 +22,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t ShriLahe/cidi-artifacts:${BUILD_NUMBER} .
+                    docker build -t 326598147/cici-repo:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push ShriLahe/cidi-artifacts:${BUILD_NUMBER}
+                    docker push 326598147/cici-repo:${BUILD_NUMBER}
                     '''
                 }
             }
